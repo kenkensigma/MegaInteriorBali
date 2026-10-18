@@ -1,0 +1,425 @@
+/* ==========================================================================
+   MEGA INTERIOR BALI — HERO SECTION
+   Exact 100% Replication of Editorial Architectural Reference Layout
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  background-color: var(--color-paper);
+  display: flex;
+  align-items: stretch;
+  padding-top: 5.5rem;
+  padding-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.hero-grid-container {
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding-left: var(--gutter-desktop);
+  padding-right: clamp(1rem, 2.5vw, 2.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.95fr) 48px;
+  gap: clamp(1.5rem, 3.5vw, 3.8rem);
+  align-items: start;
+  position: relative;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: Headline + Bio + Staircase Image
+   ========================================================================== */
+.hero-left-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+/* Giant Headline */
+.hero-headline-wrap {
+  margin-bottom: clamp(2rem, 4.5vw, 4rem);
+}
+
+.hero-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(3.6rem, 8.2vw, 8.8rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+  color: var(--color-dark-brown);
+  margin: 0;
+}
+
+.headline-line {
+  display: block;
+}
+
+.headline-roman {
+  font-style: normal;
+}
+
+.headline-italic {
+  font-style: italic;
+  font-weight: 400;
+  margin-left: 0.04em;
+}
+
+/* Lower Row: Bio text on left, Staircase image on right */
+.hero-lower-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(180px, 240px);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: end;
+  margin-bottom: 1.5rem;
+}
+
+.hero-bio-subcol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hero-index-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-soft-brown);
+  letter-spacing: 0.1em;
+}
+
+.hero-bio-text {
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  line-height: 1.62;
+  color: var(--color-soft-brown);
+  max-width: 310px;
+}
+
+.hero-cta-wrap {
+  margin-top: 0.5rem;
+}
+
+.hero-view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-dark-brown);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--color-dark-brown);
+  transition: gap var(--transition-fast), opacity var(--transition-fast);
+}
+
+.hero-view-link:hover {
+  gap: 0.75rem;
+  opacity: 0.8;
+}
+
+.hero-view-link .arrow-icon {
+  transition: transform var(--transition-fast);
+}
+
+.hero-view-link:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+.hero-meta-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: clamp(1.5rem, 3vw, 3.5rem);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-soft-brown);
+}
+
+.hero-meta-footer .divider {
+  opacity: 0.4;
+}
+
+/* Curved Staircase Image */
+.hero-staircase-subcol {
+  width: 100%;
+}
+
+.staircase-img-frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: var(--color-sand);
+}
+
+.staircase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 600ms var(--ease-editorial);
+}
+
+.staircase-img-frame:hover .staircase-img {
+  transform: scale(1.04);
+}
+
+/* Plus Dot Grid (positioned lower middle) */
+.hero-plus-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.55rem 0.95rem;
+  width: fit-content;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  user-select: none;
+  opacity: 0.45;
+}
+
+.hero-plus-grid span {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--color-soft-brown);
+  text-align: center;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: Main Featured Villa Photo + Categories + Monogram
+   ========================================================================== */
+.hero-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  height: 100%;
+}
+
+.hero-main-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  overflow: hidden;
+  background-color: var(--color-sand);
+  position: relative;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 700ms var(--ease-editorial);
+}
+
+.hero-main-img-wrap:hover .hero-main-img {
+  transform: scale(1.025);
+}
+
+/* Bottom Detail Row (Categories & Monogram) */
+.hero-bottom-detail-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+
+/* Category List */
+.hero-categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.category-item-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-soft-brown);
+  background: none;
+  border: none;
+  padding: 0.15rem 0;
+  text-align: left;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.category-item-btn:hover {
+  color: var(--color-dark-brown);
+  transform: translateX(2px);
+}
+
+.category-item-btn.is-active {
+  color: var(--color-dark-brown);
+  font-weight: 600;
+}
+
+.cat-indicator {
+  display: inline-block;
+  width: 12px;
+  font-weight: 600;
+}
+
+/* Circular Monogram (M.) */
+.hero-monogram-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-circle-monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 1px solid var(--color-dark-brown);
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: var(--color-dark-brown);
+  text-decoration: none;
+  transition: transform var(--transition-normal), background-color var(--transition-normal);
+}
+
+.hero-circle-monogram:hover {
+  transform: scale(1.05);
+  background-color: rgba(51, 40, 32, 0.05);
+}
+
+/* ==========================================================================
+   FAR RIGHT VERTICAL EDGE: SPACES / THAT / ENDURE
+   ========================================================================== */
+.hero-vertical-edge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 2rem;
+}
+
+.vertical-tagline-text {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--color-soft-brown);
+  writing-mode: vertical-rl;
+  transform: rotate(0deg);
+  white-space: nowrap;
+  user-select: none;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Desktop -> Tablet -> Mobile)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .hero-grid-container {
+    grid-template-columns: 1.15fr 0.95fr 36px;
+    gap: 1.75rem;
+  }
+
+  .hero-plus-grid {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-grid-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-right: var(--gutter-desktop);
+  }
+
+  .hero-vertical-edge {
+    display: none;
+  }
+
+  .hero-headline-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .hero-plus-grid {
+    display: none;
+  }
+
+  .hero-main-img-wrap {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 4.75rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-grid-container {
+    padding-left: var(--gutter-mobile);
+    padding-right: var(--gutter-mobile);
+    gap: 2rem;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.85rem, 11vw, 4.2rem);
+  }
+
+  .hero-lower-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-staircase-subcol {
+    max-width: 260px;
+  }
+
+  .staircase-img-frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero-meta-footer {
+    margin-top: 1.25rem;
+  }
+
+  .hero-main-img-wrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero-bottom-detail-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-circle-monogram {
+    width: 54px;
+    height: 54px;
+    font-size: 1.7rem;
+  }
+}

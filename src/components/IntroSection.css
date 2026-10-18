@@ -1,0 +1,109 @@
+.intro-section {
+  padding-top: var(--section-spacing-sm);
+  padding-bottom: var(--section-spacing);
+  background-color: var(--color-ivory);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.45fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+/* Meta Left Column */
+.intro-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.intro-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.intro-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.meta-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--color-soft-brown);
+}
+
+.meta-val {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-dark-brown);
+}
+
+/* Statement Right Column */
+.intro-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 3.5vw, 3rem);
+}
+
+.intro-statement {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.8vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  color: var(--color-dark-brown);
+}
+
+.intro-subtext-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 680px;
+}
+
+.intro-subtext {
+  font-family: var(--font-body);
+  font-size: clamp(1.02rem, 1.35vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--color-soft-brown);
+}
+
+.intro-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.location-pill,
+.scope-pill {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.85rem;
+  background-color: var(--color-sand);
+  color: var(--color-dark-brown);
+  border-radius: 2px;
+}
+
+@media (max-width: 860px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .intro-meta-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+  }
+}

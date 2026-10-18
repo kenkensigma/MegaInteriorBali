@@ -1,0 +1,92 @@
+.approach-section {
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+  background-color: var(--color-paper);
+}
+
+.approach-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 680px;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.approach-sub {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--color-soft-brown);
+}
+
+.approach-note {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-style: italic;
+  color: var(--color-stone);
+}
+
+/* Steps Grid */
+.approach-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.approach-step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-rule);
+  position: relative;
+}
+
+.step-num-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step-num {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: var(--color-dark-brown);
+  line-height: 1;
+}
+
+.step-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--color-rule);
+}
+
+.step-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-dark-brown);
+  line-height: 1.25;
+}
+
+.step-desc {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--color-soft-brown);
+}
+
+@media (max-width: 1024px) {
+  .approach-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .approach-steps-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+}
